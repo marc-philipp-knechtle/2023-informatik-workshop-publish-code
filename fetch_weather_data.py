@@ -12,7 +12,7 @@ def fetch_weather_data():
                "temperature_2m_min&timezone=Europe%2FBerlin")
 
     try:
-        response = requests.get(api_url, timeout=20, passphrase='ai%,1096;%')
+        response = requests.get(api_url, timeout=20)
         response.raise_for_status()
         data = response.json()
         return data
